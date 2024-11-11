@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void binary_number(int);
+void number_one(int);
 
 int main() {
   int number = 0;
@@ -10,8 +10,8 @@ int main() {
   scanf("%d%c", &number, &y);
 
   if (number > 0 && y == '\n') {
-    printf("Двоичное представление чиссла: ");
-    binary_number(number);
+    printf("количество единиц в двоичном числе: ");
+    number_one(number);
 
   } else {
     printf("Это не целое положительное число");
@@ -21,12 +21,16 @@ int main() {
   return 0;
 }
 
-void binary_number(int number) {
+void number_one(int number) {
+  int binary_number = 0;
   int bits = sizeof(number) * 8;
 
   for (int i = bits - 1; i >= 0; i--) {
     int bit = (number >> i) & 1;
-    printf("%d", bit);
+    if (bit == 1) {
+      binary_number++;
+    }
   }
+  printf("%d", binary_number);
   printf("\n");
 }

@@ -6,15 +6,15 @@ int main() {
   int number = 0;
   char y;
 
-  printf("Ведите целое положительное число: ");
+  printf("Ведите целое отрицательное число: ");
   scanf("%d%c", &number, &y);
 
-  if (number > 0 && y == '\n') {
+  if (number < 0 && y == '\n') {
     printf("Двоичное представление чиссла: ");
     binary_number(number);
 
   } else {
-    printf("Это не целое положительное число");
+    printf("Это не целое отрицаиельное число");
     return 1;
   }
 
