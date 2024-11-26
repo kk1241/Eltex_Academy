@@ -23,7 +23,7 @@ int main() {
 
 void number_one(int number) {
   int binary_number = 0;
-  int bits = sizeof(number) * 8;
+  int bits = Nof(number) * 8;
 
   for (int i = bits - 1; i >= 0; i--) {
     int bit = (number >> i) & 1;
