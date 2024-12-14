@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//vim
 void binary_number(int);
 
 int main() {
